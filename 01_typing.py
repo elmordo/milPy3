@@ -1,13 +1,13 @@
-from typing  import List, Callable
+from typing  import List, Callable, NoReturn
 
 
 ChildList = List["Child"]
-FindChildFn = Callable[[ChildList], Child]
+FindChildFn = Callable[[ChildList], "Child"]
 
 
 class Parent(object):
 
-    def __init__(self, child: "child"):
+    def __init__(self, child: "Child"):
         self.children: ChildList = [child]
         child.parent = self
 
@@ -18,3 +18,6 @@ class Child(object):
 
     def __init__(self):
         self.parent: Parent = None
+
+    def no_return() -> NoReturn:
+        pass

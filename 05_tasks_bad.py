@@ -14,8 +14,8 @@ async def make_task_2(i):
 async def main():
     for i in range(3):
         my_task = asyncio.create_task(make_task_1(i))  # je to spatne, ale tady to projde
-    for i in range(3):
+    for i in range(3, 6):
         my_task = asyncio.create_task(make_task_2(i))  # a tady se to posere
 
 
-asyncio.get_event_loop().run_until_complete(main())
+asyncio.run(main())

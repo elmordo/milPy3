@@ -3,7 +3,8 @@ import random
 
 
 async def random_numbers(n: int) -> float:
-    for _ in range(n):
+    for i in range(n):
+        print(i)
         await asyncio.sleep(1)
         yield random.random()
 

@@ -13,5 +13,7 @@ async def main():
     return normal_fn() + await async_fn()
 
 
-result = asyncio.run(main())
+coro = main()  # volani vytvori coroutine
+print(coro)
+result = asyncio.run(coro)
 print(result)
