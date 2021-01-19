@@ -24,7 +24,8 @@ def calculate_standard(calc_type: CalculationType):
     pass
 
 
-def calculate_extended(calc_type: Union[CalculationType, ExtendedCalculationType])
+def calculate_extended(calc_type: Union[CalculationType, ExtendedCalculationType]):
+    pass
 
 
 to_calculate = CalculationType.FORECAST
